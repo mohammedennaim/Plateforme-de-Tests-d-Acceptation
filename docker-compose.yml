@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  db:
+    container_name: postgres_youcode
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: test_youcode
+      POSTGRES_HOST_AUTH_METHOD: trust
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - laravel_network
+
+  pgadmin:
+    container_name: pgadmin4_test
+    image: dpage/pgadmin4:9.0
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: password
+    ports:
+      - "8082:80"
+    depends_on:
+      - db
+    networks:
+      - laravel_network
+
+  app:
+    build:
+      context: ./php
+      dockerfile: Dockerfile
+    container_name: test_youcode
+    restart: always
+    working_dir: /var/www/html
+    volumes:
+      - ./test_youcode:/var/www/html
+    ports:
+      - "80:80"
+    environment:
+      DB_CONNECTION: pgsql
+      DB_HOST: postgres_youcode
+      DB_PORT: 5432
+      DB_DATABASE: test_youcode
+      DB_USERNAME: postgres
+      DB_PASSWORD: postgres
+    depends_on:
+      - db
+    networks:
+      - laravel_network
+
+volumes:
+  db_data:
+  php_data:
+
+networks:
+  laravel_network:
