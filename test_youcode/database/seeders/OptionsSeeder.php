@@ -371,28 +371,28 @@ class OptionsSeeder extends Seeder
 
             // Options for Question 4
             [
-                'question_id' => 84,
+                'question_id' => 103,
                 'content' => 'const',
                 'is_correct' => true,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'question_id' => 84,
+                'question_id' => 103,
                 'content' => 'let',
                 'is_correct' => false,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'question_id' => 84,
+                'question_id' => 103,
                 'content' => 'var',
                 'is_correct' => false,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'question_id' => 84,
+                'question_id' => 103,
                 'content' => 'static',
                 'is_correct' => false,
                 'created_at' => now(),
@@ -401,28 +401,28 @@ class OptionsSeeder extends Seeder
 
             // Options for Question 5
             [
-                'question_id' => 85,
+                'question_id' => 104,
                 'content' => 'background-color',
                 'is_correct' => true,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'question_id' => 85,
+                'question_id' => 104,
                 'content' => 'color',
                 'is_correct' => false,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'question_id' => 85,
+                'question_id' => 104,
                 'content' => 'bgcolor',
                 'is_correct' => false,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'question_id' => 85,
+                'question_id' => 104,
                 'content' => 'background',
                 'is_correct' => false,
                 'created_at' => now(),
@@ -431,28 +431,28 @@ class OptionsSeeder extends Seeder
 
             // Options for Question 6
             [
-                'question_id' => 86,
+                'question_id' => 105,
                 'content' => '<a>',
                 'is_correct' => true,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'question_id' => 86,
+                'question_id' => 105,
                 'content' => '<href>',
                 'is_correct' => false,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'question_id' => 86,
+                'question_id' => 105,
                 'content' => '<link>',
                 'is_correct' => false,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'question_id' => 86,
+                'question_id' => 105,
                 'content' => '<hyperlink>',
                 'is_correct' => false,
                 'created_at' => now(),
@@ -460,28 +460,28 @@ class OptionsSeeder extends Seeder
             ],
             // Options for Question 7
             [
-                'question_id' => 87,
+                'question_id' => 106,
                 'content' => 'Cascading Style Sheets',
                 'is_correct' => true,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'question_id' => 87,
+                'question_id' => 106,
                 'content' => 'Computer Style Sheets',
                 'is_correct' => false,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'question_id' => 87,
+                'question_id' => 106,
                 'content' => 'Creative Style System',
                 'is_correct' => false,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'question_id' => 87,
+                'question_id' => 106,
                 'content' => 'Colorful Style Sheets',
                 'is_correct' => false,
                 'created_at' => now(),
@@ -490,28 +490,28 @@ class OptionsSeeder extends Seeder
 
             // Options for Question 8
             [
-                'question_id' => 88,
+                'question_id' => 107,
                 'content' => 'fopen()',
                 'is_correct' => true,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'question_id' => 88,
+                'question_id' => 107,
                 'content' => 'open_file()',
                 'is_correct' => false,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'question_id' => 88,
+                'question_id' => 107,
                 'content' => 'file_open()',
                 'is_correct' => false,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'question_id' => 88,
+                'question_id' => 107,
                 'content' => 'read_file()',
                 'is_correct' => false,
                 'created_at' => now(),
@@ -520,28 +520,28 @@ class OptionsSeeder extends Seeder
 
             // Options for Question 9
             [
-                'question_id' => 89,
+                'question_id' => 108,
                 'content' => 'git branch',
                 'is_correct' => true,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'question_id' => 89,
+                'question_id' => 108,
                 'content' => 'git checkout',
                 'is_correct' => false,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'question_id' => 89,
+                'question_id' => 108,
                 'content' => 'git create',
                 'is_correct' => false,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'question_id' => 89,
+                'question_id' => 108,
                 'content' => 'git new',
                 'is_correct' => false,
                 'created_at' => now(),

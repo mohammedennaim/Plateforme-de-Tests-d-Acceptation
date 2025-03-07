@@ -11,8 +11,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             // RolesSeeder::class,
             // QuizSeeder::class,
-            QuestionsSeeder::class,
-            // OptionsSeeder::class,
+            // QuestionsSeeder::class,
+            OptionsSeeder::class,
         ]);
     }
 }
