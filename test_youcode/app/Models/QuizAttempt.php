@@ -20,11 +20,12 @@ class QuizAttempt extends Model
 
     protected $casts = [
         'answers' => 'array',
+        'passed' => 'boolean',
         'completed_at' => 'datetime',
     ];
 
     /**
-     * Get the user that owns the attempt.
+     * Get the user that owns the quiz attempt.
      */
     public function user()
     {
@@ -32,13 +33,13 @@ class QuizAttempt extends Model
     }
 
     /**
-     * Get the quiz that this attempt belongs to.
+     * Get the quiz for this attempt.
      */
     public function quiz()
     {
         return $this->belongsTo(Quiz::class);
     }
-    
+
     /**
      * Scope a query to only include attempts by a specific user.
      */
@@ -61,13 +62,5 @@ class QuizAttempt extends Model
     public function scopeCompleted($query)
     {
         return $query->whereNotNull('completed_at');
-    }
-    
-    /**
-     * Determine if the attempt was successful.
-     */
-    public function isPassing()
-    {
-        return $this->passed;
     }
 }
