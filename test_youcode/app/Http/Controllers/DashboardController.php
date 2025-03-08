@@ -13,7 +13,6 @@ class DashboardController extends Controller
 {
     public function dashboard()
     {
-        // Get statistics
         $stats = [
             'totalStudents' => User::where('role_id', Role::where('name', 'student')->first()->id ?? 0)->count(),
             'completedQuizzes' => QuizAttempt::count(),
@@ -21,7 +20,6 @@ class DashboardController extends Controller
             'activeStaff' => User::whereIn('role_id', Role::whereIn('name', ['staff', 'admin'])->pluck('id'))->where('is_active', true)->count(),
         ];
 
-        // Get quizzes with attempt statistics
         $quizzes = Quiz::leftJoin('quiz_attempts', 'quizzes.id', '=', 'quiz_attempts.quiz_id')
             ->select(
                 'quizzes.*',
@@ -54,7 +52,7 @@ class DashboardController extends Controller
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string',
-            'duration_minutes' => 'required|integer|min:1', // Fixed field name
+            'duration_minutes' => 'required|integer|min:1',
             'passing_score' => 'required|integer|between:0,100'
         ]);
 
@@ -79,7 +77,7 @@ class DashboardController extends Controller
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string',
-            'duration_minutes' => 'required|integer|min:1', // Fixed field name
+            'duration_minutes' => 'required|integer|min:1',
             'passing_score' => 'required|integer|between:0,100'
         ]);
 

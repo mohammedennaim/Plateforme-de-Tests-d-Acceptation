@@ -20,7 +20,6 @@ class AttemptController extends Controller
     
     public function show(QuizAttempt $attempt)
     {
-        // Check if the user is authorized to view this attempt
         if (Auth::id() != $attempt->user_id && !Auth::user()->hasRole('admin')) {
             return redirect()->route('dashboard')->with('error', 'Non autorisé.');
         }

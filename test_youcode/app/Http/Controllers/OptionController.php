@@ -12,7 +12,7 @@ class OptionController extends Controller
     {
         $validatedData = $request->validate([
             'text' => 'required|string',
-            'is_correct' => 'sometimes|boolean', // Optional, defaults to false
+            'is_correct' => 'sometimes|boolean',
         ]);
 
         $question->options()->create($validatedData);

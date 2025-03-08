@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\QuizAttempt;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class ResultController extends Controller
@@ -27,7 +26,6 @@ class ResultController extends Controller
     {
         $attempt = QuizAttempt::findOrFail($id);
         
-        // Check if user is authorized to view this attempt
         if (Auth::id() !== $attempt->user_id && !Auth::user()->hasRole('admin')) {
             return redirect()->route('dashboard')
                 ->with('error', 'Unauthorized access.');

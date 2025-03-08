@@ -21,7 +21,6 @@
 
     <div class="py-8">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <!-- Alert Messages -->
             @if(session('success'))
                 <div class="mb-6 rounded-lg border-l-4 border-green-400 bg-green-50 dark:bg-green-900/20 p-4 flex items-center shadow-sm transition-all duration-500 animate-fadeIn">
                     <div class="flex-shrink-0">
@@ -69,7 +68,6 @@
                 </a>
             </div>
 
-            <!-- Questions List -->
             <div class="space-y-4">
                 @forelse($questions as $question)
                     <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm rounded-lg border border-gray-200 dark:border-gray-700 hover:shadow-md transition-all duration-200">
@@ -104,7 +102,6 @@
                                 </div>
                             </div>
                             
-                            <!-- Options -->
                             <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-2">
                                 @foreach($question->options as $option)
                                     <div class="flex items-center p-3 rounded-md {{ $option->is_correct 

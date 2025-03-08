@@ -33,12 +33,10 @@ class QuestionController extends Controller
         DB::beginTransaction();
 
         try {
-            // Create question
             $question = $quiz->questions()->create([
                 'content' => $request->content,
             ]);
 
-            // Create options
             foreach ($request->options as $index => $optionContent) {
                 $question->options()->create([
                     'content' => $optionContent,
@@ -74,12 +72,10 @@ class QuestionController extends Controller
         DB::beginTransaction();
 
         try {
-            // Update question
             $question->update([
                 'content' => $request->content,
             ]);
 
-            // Update options
             foreach ($request->options as $index => $optionData) {
                 Option::where('id', $optionData['id'])->update([
                     'content' => $optionData['content'],

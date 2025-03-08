@@ -11,17 +11,11 @@ class Role extends Model
 
     protected $fillable = ['name'];
 
-    /**
-     * Get the users for this role.
-     */
     public function users()
     {
         return $this->hasMany(User::class);
     }
     
-    /**
-     * Check if the role has a specific name.
-     */
     public function isAdmin()
     {
         return $this->name === 'admin';

@@ -102,8 +102,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-
     <div class="relative h-90 pt-16 pb-32 flex flex-col justify-center sm:px-6 lg:px-8">
         <div class="absolute inset-0">
             <img class="h-full w-full object-cover"
