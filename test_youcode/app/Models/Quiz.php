@@ -9,13 +9,13 @@ class Quiz extends Model
 {
     use HasFactory;
 
-    protected $table = 'quizzes';
     protected $fillable = [
-        'title', 
-        'description', 
-        'duration_minutes', 
+        'title',
+        'description',
+        'duration_minutes',
         'passing_score',
-        'is_active'
+        'is_active',
+        'is_published'
     ];
 
     /**
@@ -27,7 +27,7 @@ class Quiz extends Model
     }
 
     /**
-     * Get the attempts for the quiz.
+     * Get the attempts for this quiz.
      */
     public function attempts()
     {
